@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#08080B" />
+  <title>Dívida ativa da União: quanto volta aos cofres públicos · Danielli Arçari</title>
+  <meta name="description" content="Case de análise de dados: 45,5 milhões de linhas da dívida ativa da União (PGFN) tratadas no Databricks em camadas bronze, silver e gold, com 8 análises e recomendações de cobrança." />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Dívida ativa da União: quanto volta aos cofres públicos · Danielli Arçari" />
+  <meta property="og:description" content="Case de análise de dados: 45,5 milhões de linhas da dívida ativa da União (PGFN) tratadas no Databricks em camadas bronze, silver e gold, com 8 análises e recomendações de cobrança." />
+  <meta property="og:locale" content="pt_BR" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../css/tokens.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/components.css" />
+  <link rel="stylesheet" href="../css/project.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23080808'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='700' fill='%236366F1' text-anchor='middle'%3ED%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a href="../index.html" class="nav__brand"><span class="nav__brand-dot" aria-hidden="true"></span><span>Danielli Arçari</span></a>
+    <nav class="nav__links" aria-label="Navegação">
+      <a class="nav__link" href="../index.html#projetos">Projetos</a>
+      <a class="nav__link" href="../index.html#sobre">Sobre</a>
+      <a class="nav__link nav__cta btn btn--ghost btn--sm" href="../index.html#contato">Contato
+        <svg class="btn__icon btn__icon--arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="container case-breadcrumb">
+    <a href="../index.html#projetos" class="case-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Todos os projetos
+    </a>
+  </div>
+
+  <section class="container case-header">
+    <p class="eyebrow eyebrow--accent case-header__eyebrow">01 · Dados públicos · Databricks · Projeto autoral</p>
+    <h1 class="case-header__title">R$ 2,96 trilhões em dívida ativa.<br /><em>Quanto disso volta de verdade?</em></h1>
+    <p class="case-header__lede">A PGFN publica toda a dívida ativa da União, mas o número total esconde o que importa para quem cobra: o que já está negociado ou garantido, quem deve, há quanto tempo e se a estratégia judicial mira as dívidas certas. Carreguei a base completa no Databricks, organizei em camadas, corrigi dois erros graves da minha primeira versão e respondi 8 perguntas de negócio com recomendações para a cobrança.</p>
+    <div class="case-meta"><div class="case-meta__item"><span class="case-meta__label">Papel</span><span class="case-meta__value">Analista de dados</span></div><div class="case-meta__item"><span class="case-meta__label">Período</span><span class="case-meta__value">2026</span></div><div class="case-meta__item"><span class="case-meta__label">Tipo</span><span class="case-meta__value">Engenharia leve · Análise · Negócio</span></div><div class="case-meta__item"><span class="case-meta__label">Stack</span><span class="case-meta__value">Databricks · SQL · PySpark</span></div></div>
+  </section>
+
+  <div class="container">
+    <div class="case-hero-viz">
+      <div class="case-hero-viz__inner">
+        <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Estoque da dívida ativa por situação, em bilhões de reais">
+<text x="40" y="30" font-family="Inter, sans-serif" font-size="13" font-weight="500" fill="rgba(255,255,255,0.85)">Estoque por situação da inscrição</text><text x="40" y="48" font-family="JetBrains Mono, monospace" font-size="10" fill="rgba(255,255,255,0.40)">R$ bilhões · base SIDA · 2º tri/2026 · total R$ 2.961,82 bi</text>
+<text x="176" y="105.12" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="end">Em cobrança</text><rect x="190" y="82" width="400.0" height="34" rx="3" fill="#818CF8" fill-opacity="0.85"/><text x="600.0" y="105.8" font-family="Instrument Serif, serif" font-size="18" fill="#F4F4F5">1.860,95 · 62,8%</text><text x="176" y="163.12" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="end">Benefício fiscal</text><rect x="190" y="140" width="129.7" height="34" rx="3" fill="#6366F1" fill-opacity="0.85"/><text x="329.7" y="163.8" font-family="Instrument Serif, serif" font-size="18" fill="#F4F4F5">603,63</text><text x="176" y="221.12" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="end">Garantia</text><rect x="190" y="198" width="88.4" height="34" rx="3" fill="#2DD4BF" fill-opacity="0.85"/><text x="288.4" y="221.8" font-family="Instrument Serif, serif" font-size="18" fill="#F4F4F5">411,19 · 13,9%</text><text x="176" y="279.12" font-family="JetBrains Mono, monospace" font-size="11" fill="rgba(255,255,255,0.6)" text-anchor="end">Suspenso</text><rect x="190" y="256" width="18.5" height="34" rx="3" fill="#5A5A63" fill-opacity="0.85"/><text x="218.5" y="279.8" font-family="Instrument Serif, serif" font-size="18" fill="#F4F4F5">86,04</text>
+</svg>
+      </div>
+    </div>
+  </div>
+
+  <div class="container case-body">
+
+    <aside class="case-toc" aria-label="Sumário">
+      <p class="case-toc__label">Sumário</p>
+      <a href="#contexto">Contexto</a><a href="#dados">Dados</a><a href="#processo">Processo</a><a href="#achados">Achados</a><a href="#decisao">Recomendações</a><a href="#limites">Limitações</a><a href="#stack">Stack</a>
+    </aside>
+
+    <article class="case-content">
+      <section id="contexto"><h2>Contexto</h2><p>A base SIDA da PGFN tem 45,5 milhões de linhas em 6 arquivos que somam cerca de 9 GB. O volume impressiona, mas a pergunta que interessa é outra: <strong>desse estoque, o que tem chance real de ser recuperado, e onde a cobrança deveria concentrar esforço?</strong></p>
+<p>Escolhi esse tema porque junta as duas coisas que sei fazer. Passei 17 anos no Direito, e entender execução fiscal, garantia e corresponsabilidade tributária foi o que me permitiu ler esses dados sem cair nas armadilhas da base.</p></section><section id="dados"><h2>Dados</h2><div class="case-table-wrap"><table class="case-table"><thead><tr><th scope="col">Camada</th><th scope="col">Tabela</th><th scope="col">Conteúdo</th></tr></thead><tbody><tr><td>Bronze</td><td><code>bronze_sida</code></td><td>45.553.971 linhas como vieram da fonte, todas como texto, com arquivo de origem e trimestre</td></tr><tr><td>Silver</td><td><code>silver_sida</code></td><td>Todas as linhas com tipos corrigidos (valor, data e ajuizamento)</td></tr><tr><td>Silver</td><td><code>silver_inscricoes</code></td><td>30.845.336 inscrições, uma por linha, só com o devedor principal</td></tr><tr><td>Gold</td><td><code>gold_*</code></td><td>Agregados por situação, UF e tipo de pessoa, e idade da dívida</td></tr></tbody></table></div><p>Fonte: Dados Abertos da PGFN, 2º trimestre de 2026, inscrições até 10/07/2026. O recorte é a dívida ativa geral (SIDA), sem a previdenciária e o FGTS.</p></section><section id="processo"><h2>Processo</h2><p>A primeira versão do projeto tinha dois erros que mudavam tudo:</p>
+<ul><li><strong>Valores multiplicados por 100</strong>, porque o separador decimal se perdeu na conversão.</li><li><strong>Dívidas contadas mais de uma vez.</strong> A base repete cada inscrição para cada corresponsável, sempre com o valor integral. Os corresponsáveis, sozinhos, somam R$ 3,54 trilhões, e somando todas as linhas o estoque passaria de R$ 6,8 trilhões.</li></ul><p>Refiz tudo a partir da fonte original:</p><ul><li><strong>Ingestão direta</strong> do site da PGFN para um Volume do Databricks, carregando e apagando um CSV por vez para respeitar o limite de armazenamento da versão gratuita.</li><li><strong>Diagnóstico de qualidade</strong> antes de qualquer análise: nenhum dos 45,5 milhões de valores falhou na conversão.</li><li><strong>Uma linha por inscrição</strong>, só com o devedor principal, e devedores agrupados pela raiz do CNPJ (8 primeiros dígitos).</li><li><strong>Regras de negócio documentadas</strong> no notebook: valor consolidado, idade da dívida, limite de ajuizamento da Portaria MF nº 75/2012.</li></ul><figure class="case-figure"><img src="../img/pgfn-painel.jpg" alt="Painel com os principais números da dívida ativa da União" loading="lazy" /><figcaption>Painel publicado no LinkedIn com os principais achados. Gráficos originais feitos no editor nativo do Databricks.</figcaption></figure></section><section id="achados"><h2>Achados</h2><div class="case-stats"><div class="case-stat"><div class="case-stat__value">51,3<em>%</em></div><div class="case-stat__label">do valor está com 3.270 devedores, só 0,04% do total</div></div><div class="case-stat"><div class="case-stat__value">48,7<em>%</em></div><div class="case-stat__label">do estoque (R$ 1,44 tri) está em execução fiscal sem garantia</div></div><div class="case-stat"><div class="case-stat__value">32,7<em>%</em></div><div class="case-stat__label">do valor tem mais de 10 anos de inscrição</div></div></div><div class="case-findings"><p class="case-findings__title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>O que os dados mostram</p><ul><li><strong>A cobrança judicial mira as dívidas grandes:</strong> as ajuizadas são cerca de 20% das inscrições e 78% do valor.</li><li><strong>A regra do limite de R$ 20 mil é respeitada.</strong> Metade das ajuizadas tem valor individual abaixo do limite, mas só 1,0% continua abaixo quando se soma a dívida do devedor. Testei duas hipóteses antes de concluir, e a soma por devedor explicou quase tudo.</li><li><strong>Dívida velha continua em cobrança:</strong> depois dos 15 anos, a parcela em cobrança sobe para cerca de 80%.</li><li><strong>Três tributos concentram o estoque:</strong> IRPJ, COFINS e CSLL somam 47,2%. O Simples Nacional tem o maior número de inscrições, mas só 7,5% do valor.</li><li><strong>Os 20 maiores devedores empresariais somam R$ 348,1 bilhões</strong>, e cinco deles, com falência indicada no nome, respondem por R$ 68,8 bilhões.</li></ul></div></section><section id="decisao"><h2>Recomendações</h2><ol class="case-recs"><li><span class="case-recs__num">01</span><div><strong>Dois modelos de cobrança.</strong> Atuação individualizada para os devedores acima de R$ 15 milhões, que concentram R$ 2,10 trilhões, e cobrança em massa (protesto, transação por adesão) para os 7,3 milhões de devedores abaixo de R$ 100 mil, que somam 2,8% do valor.</div></li><li><span class="case-recs__num">02</span><div><strong>Agir cedo.</strong> 74,5% do valor inscrito no último ano está em cobrança, sem negociação nem garantia. É a janela com mais chance, antes que o devedor perca patrimônio.</div></li><li><span class="case-recs__num">03</span><div><strong>Tratar a dívida antiga como bloco separado.</strong> As inscrições com mais de 15 anos somam R$ 524,22 bilhões. Uma triagem separa o valor contábil do valor com perspectiva real de recuperação.</div></li><li><span class="case-recs__num">04</span><div><strong>Usar os corresponsáveis.</strong> Nas dívidas acima de R$ 15 milhões, mais de um terço das inscrições tem corresponsável, com média de 4,2 a 5,2 pessoas por inscrição.</div></li><li><span class="case-recs__num">05</span><div><strong>Acompanhar os grandes devedores falidos</strong> pelos processos falimentares, sem esperar recuperação por ações de cobrança comuns.</div></li></ol><p style="margin-top:var(--s-6);">As recomendações partem só dos dados públicos e não consideram custos operacionais nem a estratégia que a PGFN já adota.</p></section><section id="limites"><h2>Limitações</h2><ul><li>É uma fotografia de um trimestre: não mostra o que entrou, saiu ou foi pago.</li><li>A base não traz a data do ajuizamento; a análise da portaria usa a data de inscrição como aproximação.</li><li>Os valores incluem juros e encargos até 2026, então dívidas antigas aparecem maiores do que eram na origem.</li><li>As medianas usam <code>PERCENTILE_APPROX</code> e podem variar alguns reais entre execuções.</li></ul><h3>Próximos passos</h3><ul><li>Carregar os trimestres anteriores para medir entrada, saída e envelhecimento do estoque.</li><li>Transformar as conferências manuais em testes automáticos e agendar a carga trimestral com Databricks Jobs.</li><li>Cruzar a raiz do CNPJ com os dados abertos da Receita Federal para identificar empresas baixadas ou falidas.</li></ul></section><section id="stack"><h2>Stack</h2><div class="case-stack tag-group"><span class="tag tag--accent">Databricks</span><span class="tag tag--accent">SQL</span><span class="tag">PySpark</span><span class="tag">Delta Lake</span><span class="tag">Arquitetura medalhão</span><span class="tag">Visualização nativa do Databricks</span><span class="tag">Dados abertos</span></div></section>
+      <div class="case-actions"><a href="https://github.com/danielli-arcari/analise-divida-ativa-pgfn" target="_blank" rel="noopener" class="btn btn--accent"><svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>Ver no GitHub</a><a href="https://www.linkedin.com/in/danielli-arcari" target="_blank" rel="noopener" class="btn btn--ghost"><svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg>Conversar no LinkedIn</a></div>
+    </article>
+  </div>
+
+  <section class="container case-next">
+    <div class="case-next__grid">
+      <a href="../index.html#projetos" class="case-next__card"><p class="case-next__label">Case anterior</p><h3 class="case-next__title">Todos os projetos</h3><span class="case-next__arrow">Ver a lista<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+      <a href="imdb-filmes.html" class="case-next__card"><p class="case-next__label">Próximo case · 02 / 07</p><h3 class="case-next__title">Reputação x retorno no cinema</h3><span class="case-next__arrow">Continuar<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></span></a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top:1px solid var(--border-subtle);padding-top:var(--s-8);">
+        <span>© <span id="year">2026</span> Danielli Arçari · axiadmc@gmail.com</span>
+        <div class="footer__socials">
+          <a class="footer__social" href="https://www.linkedin.com/in/danielli-arcari" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2zM4 6a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"/></svg></a>
+          <a class="footer__social" href="https://github.com/danielli-arcari" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.5.34 1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.7 1.03 1.6 1.03 2.69 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg></a>
+          <a class="footer__social" href="mailto:axiadmc@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</main>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>
